@@ -1,13 +1,13 @@
 {
-  "name": "node-prototype",
+  "name": "node-comics",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto de colecciones de comics con Node",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"
   },
-  "author": "",
+  "author": "Antonio Rosales Martinez",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
