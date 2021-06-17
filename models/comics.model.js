@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const comicSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true },
+    title: { type: String, required: true },
     subtitle: { type: String, required: false },
     numberOfTheCollection: { type: Number, required: true },
     numberTotalCollection: { type: Number, required: true },

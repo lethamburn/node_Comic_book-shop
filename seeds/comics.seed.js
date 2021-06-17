@@ -6,7 +6,7 @@ const DB_URL = "mongodb://localhost:27017/comicsShop"; //Esto es el nombre de la
 
 const comicSeed = [
   {
-    name: "The Sandman",
+    title: "The Sandman",
     subtitle: "Sleep of the Just",
     numberOfTheCollection: 1,
     numberTotalCollection: 75,
@@ -18,7 +18,7 @@ const comicSeed = [
     score: "4/5",
   },
   {
-    name: "The Sandman",
+    title: "The Sandman",
     subtitle: "Imperfect Hosts",
     numberOfTheCollection: 2,
     numberTotalCollection: 75,
@@ -30,7 +30,7 @@ const comicSeed = [
     score: "4/5",
   },
   {
-    name: "The Sandman",
+    title: "The Sandman",
     subtitle: "...Dream a little dream of me",
     numberOfTheCollection: 3,
     numberTotalCollection: 75,
@@ -42,7 +42,7 @@ const comicSeed = [
     score: "4/5",
   },
   {
-    name: "The Sandman",
+    title: "The Sandman",
     subtitle: "Hope in Hell",
     numberOfTheCollection: 4,
     numberTotalCollection: 75,
@@ -54,7 +54,7 @@ const comicSeed = [
     score: "4/5",
   },
   {
-    name: "The Sandman",
+    title: "The Sandman",
     subtitle: "Passengers",
     numberOfTheCollection: 6,
     numberTotalCollection: 75,
@@ -66,7 +66,7 @@ const comicSeed = [
     score: "5/5",
   },
   {
-    name: "The Sandman",
+    title: "The Sandman",
     subtitle: "24 Hours",
     numberOfTheCollection: 6,
     numberTotalCollection: 75,
@@ -78,7 +78,7 @@ const comicSeed = [
     score: "4/5",
   },
   {
-    name: "The Sandman",
+    title: "The Sandman",
     subtitle: "Sound and Fury",
     numberOfTheCollection: 7,
     numberTotalCollection: 75,
@@ -90,7 +90,7 @@ const comicSeed = [
     score: "5/5",
   },
   {
-    name: "The Sandman",
+    title: "The Sandman",
     subtitle: "The Sound of Her Wings",
     numberOfTheCollection: 8,
     numberTotalCollection: 75,
@@ -102,7 +102,7 @@ const comicSeed = [
     score: "4/5",
   },
   {
-    name: "The Sandman",
+    title: "The Sandman",
     subtitle: "Tales in the Sand",
     numberOfTheCollection: 9,
     numberTotalCollection: 28,

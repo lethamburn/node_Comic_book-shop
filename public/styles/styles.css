@@ -6,30 +6,38 @@ body {
   height: 100vh;
   font-family: "Lato";
 }
-h2{
+input[type="text"] {
+  padding: 5px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  margin: 2px;
+}
+
+h2 {
   font-size: 16px;
   text-align: left;
 }
-h3{
+h3 {
   font-size: 14px;
   text-align: left;
 }
-h5{
+h5 {
   color: white;
   font-size: 13px;
   text-align: right;
 }
 .wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: auto;
+  /* position: absolute; */
+  /*   top: 50%; */
+  /*   left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /*   width: 100%;
+  height: auto; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: 30px;
+  justify-content: center;
+  /* margin: 30px; */
+  height: 90vh;
 }
 .card {
   padding: 10px;
@@ -37,18 +45,19 @@ h5{
   flex-basis: 200px;
   flex-grow: 0;
   height: 293.33px;
-
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   overflow: hidden;
   position: relative;
 }
+
 .card img {
   width: 100%;
   height: 100%;
   transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   box-shadow: 0px 4px 7px rgb(0, 0, 0);
 }
+
 .descriptions {
   position: absolute;
   top: 0px;
@@ -89,7 +98,7 @@ h5{
 }
 .card button {
   width: fit-content;
-  height: 40px;
+  height: 30px;
   cursor: pointer;
   border-style: none;
   background-color: #ff3838;
@@ -98,8 +107,124 @@ h5{
   outline: none;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
   transition: all 0.5s ease-in-out;
+  margin-top: 2px;
+  margin-left: 2px;
 }
 .card button:hover {
-  transform: scale(0.95) translateX(-5px);
+  transform: scale(0.95) translateX(-10px);
   transition: all 0.5s ease-in-out;
+}
+
+@keyframes in {
+  0% {
+    width: 0;
+    left: 0;
+    right: auto;
+  }
+  100% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+@keyframes out {
+  0% {
+    width: 100%;
+    left: auto;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav {
+  margin: 27px auto 0;
+  margin-bottom: 10px;
+  padding: 5px;
+  position: relative;
+  width: 590px;
+  height: 50px;
+  background-color: #292826;
+  border-radius: 8px;
+  font-size: 0;
+  font-family: "Lato";
+}
+nav a {
+  line-height: 50px;
+  height: 100%;
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f9d342;
+  cursor: pointer;
+}
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  transition: all 0.5s ease 0s;
+  border-radius: 8px;
+}
+a:nth-child(1) {
+  width: 100px;
+}
+a:nth-child(2) {
+  width: 110px;
+}
+a:nth-child(3) {
+  width: 100px;
+}
+a:nth-child(4) {
+  width: 160px;
+}
+a:nth-child(5) {
+  width: 120px;
+}
+nav .start-home,
+a:nth-child(1):hover ~ .animation {
+  width: 100px;
+  left: 0;
+  background-color: grey;
+}
+nav .start-about,
+a:nth-child(2):hover ~ .animation {
+  width: 110px;
+  left: 100px;
+  background-color: grey;
+}
+nav .start-blog,
+a:nth-child(3):hover ~ .animation {
+  width: 100px;
+  left: 210px;
+  background-color: grey;
+}
+nav .start-portefolio,
+a:nth-child(4):hover ~ .animation {
+  width: 160px;
+  left: 310px;
+  background-color: grey;
+}
+nav .start-contact,
+a:nth-child(5):hover ~ .animation {
+  width: 120px;
+  left: 470px;
+  background-color: grey;
 }

@@ -14,4 +14,37 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.post("/add-comic", async (req, res, next) => {
+  try {
+    const {
+      title,
+      subtitle,
+      numberOfTheCollection,
+      numberTotalCollection,
+      image,
+      authors,
+      numberOfPages,
+      score,
+      dateOfUpload,
+    } = req.body;
+
+    const newComic = new Comic({
+      title,
+      subtitle,
+      numberOfTheCollection,
+      numberTotalCollection,
+      image,
+      authors,
+      numberOfPages,
+      score,
+      dateOfUpload,
+    });
+
+    await newComic.save();
+    return res.status(201).redirect("/comics");
+  } catch (error) {
+    return next(error);
+  }
+});
+
 module.exports = router;
