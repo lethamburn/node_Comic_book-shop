@@ -9,7 +9,7 @@ const comicSchema = new mongoose.Schema(
     image: { type: String, required: true },
     authors: { type: String, required: true },
     numberOfPages: { type: Number, required: true },
-    opinion: { type: String, required: false },
+    score: { type: String, required: false },
     dateOfUpload: { type: String, required: true },
   },
   { timestamps: true }
