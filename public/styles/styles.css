@@ -1,11 +1,41 @@
 body {
-  background-color: #292826;
+  background: 
+  linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, black 25%, transparent 25%),
+  linear-gradient(45deg, black 25%, transparent 25%);	
+  background-size: 2em 2em;
+  background-color: #232323;
   padding: 0px;
   margin: 0px;
   width: 100%;
   height: 100vh;
   font-family: "Lato";
 }
+nav{
+   text-align: center;
+   padding: 10px;
+}
+.btn{
+  color:#f9d342;
+  background:rgba(0, 0, 0, 0.5);
+  padding:10px 20px;
+  font-size:12px;
+  text-decoration:none;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-family: "Lato";
+  font-weight: bold;
+}
+
+.btn:hover{
+  border:none;
+  background:rgba(0, 0, 0, 0.4);
+  background:#fff;
+  padding:20px 20px #000;
+  color:#1b1b1b;
+}
+
 input[type="text"] {
   padding: 5px;
   border: 0;
@@ -97,12 +127,12 @@ h5 {
   height: 70%;
 }
 .card button {
-  width: fit-content;
+  width: 85px;
   height: 30px;
   cursor: pointer;
   border-style: none;
-  background-color: #ff3838;
-  color: #fff;
+  background-color: #f9d342;
+  color: rgb(0, 0, 0);
   font-size: 15px;
   outline: none;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
@@ -148,83 +178,4 @@ h5 {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-nav {
-  margin: 27px auto 0;
-  margin-bottom: 10px;
-  padding: 5px;
-  position: relative;
-  width: 590px;
-  height: 50px;
-  background-color: #292826;
-  border-radius: 8px;
-  font-size: 0;
-  font-family: "Lato";
-}
-nav a {
-  line-height: 50px;
-  height: 100%;
-  font-size: 15px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  color: #f9d342;
-  cursor: pointer;
-}
-nav .animation {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  z-index: 0;
-  transition: all 0.5s ease 0s;
-  border-radius: 8px;
-}
-a:nth-child(1) {
-  width: 100px;
-}
-a:nth-child(2) {
-  width: 110px;
-}
-a:nth-child(3) {
-  width: 100px;
-}
-a:nth-child(4) {
-  width: 160px;
-}
-a:nth-child(5) {
-  width: 120px;
-}
-nav .start-home,
-a:nth-child(1):hover ~ .animation {
-  width: 100px;
-  left: 0;
-  background-color: grey;
-}
-nav .start-about,
-a:nth-child(2):hover ~ .animation {
-  width: 110px;
-  left: 100px;
-  background-color: grey;
-}
-nav .start-blog,
-a:nth-child(3):hover ~ .animation {
-  width: 100px;
-  left: 210px;
-  background-color: grey;
-}
-nav .start-portefolio,
-a:nth-child(4):hover ~ .animation {
-  width: 160px;
-  left: 310px;
-  background-color: grey;
-}
-nav .start-contact,
-a:nth-child(5):hover ~ .animation {
-  width: 120px;
-  left: 470px;
-  background-color: grey;
 }
