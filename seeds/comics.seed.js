@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const Comic = require("../models/comics.model");
+const Comic = require("../models/Comic.model");
 
-const DB_URL = "mongodb://localhost:27017/comicsShop"; //Esto es el nombre de la colección
+const DB_URL = "mongodb://localhost:27017/comic-book-shop"; //Esto es el nombre de la colección
 
 const comicSeed = [
   {

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error {{status}}</title>
+        <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+<body>
+     <nav>
+         {{#if user}}{{else}}
+        <a class="btn" href="/auth/login">Login</a>
+        <a class="btn" href="/auth/register">Register</a>
+      {{/if}}
+       <a class="btn" href="/">Home</a>
+      <a class="btn" href="/comics">Comics</a>
+    </div>
+      </nav>
+    <h1>ERROOOOOOOOOOOOOOOOOR {{ status }} </h1>
+    <a href="/">Home</a>
+    <h4>{{message}}</h4>
+</body>
+</html>

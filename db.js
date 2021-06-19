@@ -1,19 +1,18 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const DB_URL = "mongodb://localhost:27017/comicsShop"; //tiene que tener el mongodb antes de la URL como aquí TODO EN MINUSCULA
+const DB_URL = 'mongodb://localhost:27017/comic-book-shop';
 
-const connect = () => {
-  mongoose
-    .connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then((res) => {
-      console.log("Conectado a la base de datos");
-    })
-    .catch((error) => {
-      console.log("Ha ocurrido un error conectando a la base de datos", error);
-    });
+const connect = async () => {
+    try {
+        const db = await mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+        const { name, host } = db.connection;
+        console.log(`Connected to ${name} DB in ${host}`);
+    } catch (error) {
+        console.log('There has been an error connecting to the db.', error);
+    }
 };
 
 module.exports = {
-  DB_URL,
-  connect,
+    DB_URL,
+    connect,
 };

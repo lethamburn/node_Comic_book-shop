@@ -1,38 +1,63 @@
-const express = require("express");
-const db = require("./db");
-const path = require("path"); //Esto hace falta para que abajo se pueda usar el path en la carpeta views y public
-const comicsRoute = require("./routes/comics.route");
-const usersRoute = require("./routes/users.route");
+const express = require('express');
+const path = require('path');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+const passport = require('passport');
+require('./auth');
+const db = require('./db');
+const indexRoutes = require('./routes/index.routes');
+const authRoutes = require('./routes/auth.routes');
+const comicsRoutes = require('./routes/comics.routes');
 
-//Esto conecta con el db.js, ya que lo hemos exportado al final del archivo
 db.connect();
 
-const PORT = 3000;
+const PORT = 3200;
 
-const server = express();
-const router = express.Router();
+const app = express();
 
-///////////////////////////////////
-server.use(express.static(path.join(__dirname, "public")));
+app.use(session({
+    secret: 'asd!WQe!"3d.asd0/)12/3Adcq', 
+    resave: false, 
+    saveUninitialized: false, 
+    cookie: {
+        maxAge: 1 * 24 * 60 * 60 * 1000,
+    },
+    store: MongoStore.create({ mongoUrl: db.DB_URL }),
+}));
 
-server.set("views", path.join(__dirname, "views"));
+app.use(passport.initialize());
+app.use(passport.session());
 
-server.set("view engine", "hbs");
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-server.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
-server.use(express.urlencoded({ extended: true }));
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'hbs');
 
-///////////////////////////////////
+app.use('/', indexRoutes);
+app.use('/auth', authRoutes);
+app.use('/comics', comicsRoutes);
 
-router.get("/", (req, res) => {
-  res.send("Servidor funcionando");
+app.use('*', (req, res, next) => {
+    const error = new Error('Path not found');
+
+    return res.status(404).render('error', {
+        message: error.message,
+        status: 404,
+    });
 });
 
-/* server.use("/", router); */
-server.use("/comics", comicsRoute);
-server.use("/users", usersRoute);
+app.use((error, req, res, next) => {
+    console.log(error);
 
-server.listen(PORT, () => {
-  console.log(`El servidor está funcionando en el puerto ${PORT}`);
+    return res.status(error.status || 500).render('error', {
+        message: error.message || 'Unexpected error, try again',
+        status: error.status || 500,
+    });
 });
+
+app.listen(PORT, () => {
+    console.log(`Server listening on http://localhost:${PORT}`);
+})

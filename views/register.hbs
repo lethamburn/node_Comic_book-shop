@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+        <link rel="stylesheet" href="/styles/register.css" />
+</head>
+<body>
+   <header>
+       <nav>
+         {{#if user}}{{else}}
+        <a class="btn" href="/auth/login">Login</a>
+        <a class="btn" href="/auth/register">Register</a>
+      {{/if}}
+       <a class="btn" href="/">Home</a>
+      <a class="btn" href="/comics">Comics</a>
+    </div>
+      </nav>
+    </header>
+          <h1>Register</h1>
+      <div class="container">
+
+
+    <form action="/auth/register" method="POST" class="form">
+
+        <label>
+            <p>Email</p>
+            <input name="email" type="email" required placeholder="E-mail">
+        </label>
+
+        <label>
+            <p>Name and Adress</p>
+            <input name="name" type="text" required placeholder="Full name">
+        </label>
+
+        <label>
+            <p>Password</p>
+            <input name="password" type="password" required placeholder="Password">
+        </label>
+
+        <input type="submit" value="Register" class="btn2">
+
+        {{#if error}}
+            <div style="color: red">{{error}}</div>
+        {{/if}}
+    </form>
+    </div>
+    <footer>
+       {{#if user}}
+        <form action="/auth/logout" method="POST">
+          <input type="submit" value="Logout" class="btn"/>
+        </form>
+    {{/if}}
+</footer>
+</body>
+</html>

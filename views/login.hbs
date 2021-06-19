@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles/login.css" />
+  </head>
+  <body>
+   <header>
+      <nav>
+         {{#if user}}{{else}}
+        <a class="btn" href="/auth/login">Login</a>
+        <a class="btn" href="/auth/register">Register</a>
+      {{/if}}
+       <a class="btn" href="/">Home</a>
+      <a class="btn" href="/comics">Comics</a>
+    </div>
+      </nav>
+    </header>
+    <h1>Login</h1>
+    <div class="container">
+      <form action="/auth/login" method="POST">
+
+        <label>
+          <p>Email</p>
+          <input name="email" type="email" required placeholder="email" />
+        </label>
+
+        <label>
+          <p>Password</p>
+          <input
+            name="password"
+            type="password"
+            required
+            placeholder="password"
+          />
+        </label>
+
+        <button class="btn" type="submit">Login</button>
+
+      </form>
+      {{#if error}}
+        <div style="color: red">{{error}}</div>
+      {{/if}}
+    </div>
+    <footer>
+       {{#if user}}
+        <form action="/auth/logout" method="POST">
+          <input type="submit" value="Logout" class="btn"/>
+        </form>
+    {{/if}}
+</footer>
+  </body>
+</html>
