@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Comic Book Shop - Register</title>
         <link rel="stylesheet" href="/styles/register.css" />
         <link rel="shortcut icon" href="/uploads/comic_book.ico" />
 </head>
@@ -29,6 +29,10 @@
 
 
     <form action="/auth/register" method="POST" class="form">
+    <label>
+            <p>Name and Adress</p>
+            <input name="name" type="text" required placeholder="Full name">
+        </label>
 
         <label>
             <p>Email</p>
@@ -36,34 +40,32 @@
         </label>
 
         <label>
-            <p>Name and Adress</p>
-            <input name="name" type="text" required placeholder="Full name">
-        </label>
-
-        <label>
             <p>Password</p>
             <input name="password" type="password" required placeholder="Password">
         </label>
-
+        <br>
         <input type="submit" value="Register" class="btn2">
+
+
+
 
         {{#if error}}
             <div style="color: red">{{error}}</div>
         {{/if}}
     </form>
     </div>
-  <footer class="footer-distributed">
+<footer class="footer-distributed">
 
 					<p class="footer-links">
-					<a class="link-1" href="#">Home</a>
+					<a class="link-1" href="/">Home</a>
 
-					<a href="#">Blog</a>
+					<a href="https://github.com/lethamburn">GitHub</a>
 
-					<a href="#">Pricing</a>
+					<a href="#">Twitter</a>
 
-					<a href="#">About</a>
+					<a href="#">Facebook</a>
 
-					<a href="#">Faq</a>
+					<a href="#">Instagram</a>
 
 					<a href="#">Contact</a>
 				</p>
