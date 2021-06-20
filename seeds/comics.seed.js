@@ -16,6 +16,7 @@ const comicSeed = [
     numberOfPages: 42,
     dateOfUpload: "15/06/2021",
     score: "4/5",
+    idUser: "60ce27426afbce2dc8bf0693",
   },
   {
     title: "The Sandman",
@@ -28,6 +29,7 @@ const comicSeed = [
     numberOfPages: 26,
     dateOfUpload: "15/06/2021",
     score: "4/5",
+    idUser: "60ce27426afbce2dc8bf0693",
   },
   {
     title: "The Sandman",
@@ -40,6 +42,7 @@ const comicSeed = [
     numberOfPages: 26,
     dateOfUpload: "15/06/2021",
     score: "4/5",
+    idUser: "60ce27426afbce2dc8bf0693",
   },
   {
     title: "The Sandman",
@@ -52,6 +55,7 @@ const comicSeed = [
     numberOfPages: 26,
     dateOfUpload: "15/06/2021",
     score: "4/5",
+    idUser: "60ce27426afbce2dc8bf0693",
   },
   {
     title: "The Sandman",
@@ -64,6 +68,7 @@ const comicSeed = [
     numberOfPages: 26,
     dateOfUpload: "15/06/2021",
     score: "5/5",
+    idUser: "60ce27426afbce2dc8bf0693",
   },
   {
     title: "The Sandman",
@@ -76,6 +81,7 @@ const comicSeed = [
     numberOfPages: 26,
     dateOfUpload: "15/06/2021",
     score: "4/5",
+    idUser: "60ce27426afbce2dc8bf0693",
   },
   {
     title: "The Sandman",
@@ -88,6 +94,7 @@ const comicSeed = [
     numberOfPages: 26,
     dateOfUpload: "15/06/2021",
     score: "5/5",
+    idUser: "60ce27426afbce2dc8bf0693",
   },
   {
     title: "The Sandman",
@@ -100,6 +107,7 @@ const comicSeed = [
     numberOfPages: 26,
     dateOfUpload: "15/06/2021",
     score: "4/5",
+    idUser: "60ce27426afbce2dc8bf0693",
   },
   {
     title: "The Sandman",
@@ -112,6 +120,7 @@ const comicSeed = [
     numberOfPages: 52,
     dateOfUpload: "16/06/2021",
     score: "5/5",
+    idUser: "60ce27426afbce2dc8bf0693",
   },
 ];
 

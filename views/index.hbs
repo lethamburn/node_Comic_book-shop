@@ -5,30 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comic Shop</title>
         <link rel="stylesheet" href="/styles/index.css" />
+        <link rel="shortcut icon" href="/uploads/comic_book.ico" />
   </head>
   <body>
      <header>
-      <nav>
-         {{#if user}}{{else}}
-        <a class="btn" href="/auth/login">Login</a>
-        <a class="btn" href="/auth/register">Register</a>
-      {{/if}}
-       <a class="btn" href="/">Home</a>
-      <a class="btn" href="/comics">Comics</a>
-    </div>
+       <nav>
+        {{#if user}}
+          <a class="btn" href="/">Home</a>
+          <a class="btn" href="/comics">Comics</a>
+          <form action="/auth/logout" method="POST">
+            <input type="submit" value="Logout" class="btn2" />
+          </form>
+        {{else}}
+          <a class="btn" href="/auth/login">Login</a>
+          <a class="btn" href="/auth/register">Register</a>
+        {{/if}}
+
       </nav>
     </header>
    <main>
      <h1>COMIC BOOK SHOP</h1>
-
+<img src="/uploads/comics.jpg" alt="" class="cover">
    </main>
-<footer>
-       {{#if user}}
-        <form action="/auth/logout" method="POST">
-          <input type="submit" value="Logout" class="btn"/>
-        </form>
-    {{/if}}
-</footer>
+  <footer class="footer-distributed">
+
+					<p class="footer-links">
+					<a class="link-1" href="#">Home</a>
+
+					<a href="#">Blog</a>
+
+					<a href="#">Pricing</a>
+
+					<a href="#">About</a>
+
+					<a href="#">Faq</a>
+
+					<a href="#">Contact</a>
+				</p>
+
+				<p>Comic Book Shop &copy; 2021</p>
+			</div>
+
+		</footer>
 
   </body>
 </html>

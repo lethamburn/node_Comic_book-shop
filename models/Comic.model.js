@@ -6,11 +6,12 @@ const comicSchema = new mongoose.Schema(
     subtitle: { type: String, required: false },
     numberOfTheCollection: { type: Number, required: true },
     numberTotalCollection: { type: Number, required: true },
-    image: { type: String},
+    image: { type: String },
     authors: { type: String, required: true },
     numberOfPages: { type: Number, required: true },
     score: { type: String, required: false },
     dateOfUpload: { type: String, required: true },
+    idUser: { type: mongoose.Types.ObjectId, ref: "idUser" },
   },
   { timestamps: true }
 );
