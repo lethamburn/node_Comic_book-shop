@@ -1,6 +1,6 @@
 deleteComic = async (id) => {
   if (confirm("DO YOU REALLY WANT TO DELETE THIS COMIC?")) {
-    await fetch("http://localhost:3500/comics/" + id, {
+    await fetch("https://comic-book-shop.herokuapp.com/comics" + id, {
       method: "DELETE",
 
       headers: {
