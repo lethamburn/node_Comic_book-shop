@@ -2,15 +2,15 @@ const mongoose = require("mongoose");
 
 const comicSchema = new mongoose.Schema(
   {
-    title: { type: String, required: true },
-    subtitle: { type: String, required: false },
-    numberOfTheCollection: { type: Number, required: true },
-    numberTotalCollection: { type: Number, required: true },
+    title: { type: String },
+    subtitle: { type: String },
+    numberOfTheCollection: { type: Number },
+    numberTotalCollection: { type: Number },
     image: { type: String },
-    authors: { type: String, required: true },
-    numberOfPages: { type: Number, required: true },
-    score: { type: String, required: false },
-    dateOfUpload: { type: String, required: true },
+    authors: { type: String },
+    numberOfPages: { type: Number },
+    score: { type: String },
+    dateOfUpload: { type: String },
     idUser: { type: mongoose.Types.ObjectId, ref: "idUser" },
   },
   { timestamps: true }
