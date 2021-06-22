@@ -3,11 +3,6 @@ const path = require("path");
 const fs = require("fs");
 const cloudinary = require("cloudinary").v2;
 
-cloudinary.config({
-  cloud_name: "donr8pbyh",
-  api_key: "115648165287318",
-  api_secret: "rjjWVU-OSz6UgrS7jVuDMzplbNg",
-});
 
 const storage = multer.diskStorage({
   filename: (req, file, cb) => {
