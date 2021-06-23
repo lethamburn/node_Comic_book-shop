@@ -45,7 +45,7 @@ app.set("view engine", "hbs");
 app.use("/", indexRoutes);
 app.use("/auth", authRoutes);
 app.use("/comics", comicsRoutes);
-app.use("/manga", mangaRoutes);
+app.use("/mangas", mangaRoutes);
 app.use("/stats", statsRoutes);
 
 app.use("*", (req, res, next) => {
