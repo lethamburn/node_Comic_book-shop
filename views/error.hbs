@@ -11,15 +11,11 @@
 <body>
      <nav>
          {{#if user}}{{else}}
-        <a class="btn" href="/auth/login">Login</a>
-        <a class="btn" href="/auth/register">Register</a>
       {{/if}}
        <a class="btn" href="/">Home</a>
-      <a class="btn" href="/comics">Comics</a>
     </div>
       </nav>
-    <h1>ERROOOOOOOOOOOOOOOOOR {{ status }} </h1>
-    <a href="/">Home</a>
-    <h4>{{message}}</h4>
+    <h1>ERROR {{ status }} </h1>
+    <h2>{{message}}</h2>
 </body>
 </html>

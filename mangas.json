@@ -1,0 +1,137 @@
+[{
+  "_id": {
+    "$oid": "60d2d74f98a403291046fa20"
+  },
+  "title": "Berserk",
+  "subtitle": "The Wind of Swords",
+  "numberOfTheCollection": 1,
+  "numberTotalCollection": 365,
+  "image": "https://cdn.readberserk.com/file/AnimeRleases/Berserk_1_001.jpg",
+  "authors": "\tKentaro Miura",
+  "numberOfPages": 125,
+  "dateOfUpload": "15/06/2021",
+  "score": "5/5",
+  "idUser": {
+    "$oid": "60ce27426afbce2dc8bf0693"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  }
+},{
+  "_id": {
+    "$oid": "60d2d74f98a403291046fa21"
+  },
+  "title": "Berserk",
+  "subtitle": "Nosferatu Zodd - Chapter 1",
+  "numberOfTheCollection": 2,
+  "numberTotalCollection": 365,
+  "image": "https://cdn.readberserk.com/file/AnimeRleases/Berserk_2_001.jpg",
+  "authors": "Kentaro Miura",
+  "numberOfPages": 123,
+  "dateOfUpload": "15/06/2021",
+  "score": "4/5",
+  "idUser": {
+    "$oid": "60ce27426afbce2dc8bf0693"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  }
+},{
+  "_id": {
+    "$oid": "60d2d74f98a403291046fa22"
+  },
+  "title": "Berserk",
+  "subtitle": "Nosferatu Zodd - Chapter 1",
+  "numberOfTheCollection": 3,
+  "numberTotalCollection": 365,
+  "image": "https://cdn.readberserk.com/file/AnimeRleases/Berserk_3_001.jpg",
+  "authors": "Kentaro Miura",
+  "numberOfPages": 126,
+  "dateOfUpload": "15/06/2021",
+  "score": "4/5",
+  "idUser": {
+    "$oid": "60ce27426afbce2dc8bf0693"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  }
+},{
+  "_id": {
+    "$oid": "60d2d74f98a403291046fa23"
+  },
+  "title": "El enigma de la falla de Amigara",
+  "numberOfTheCollection": 1,
+  "numberTotalCollection": 1,
+  "image": "http://revistakokoro.com/junji01.jpg",
+  "authors": "Junji Ito",
+  "numberOfPages": 26,
+  "dateOfUpload": "15/06/2021",
+  "score": "5/5",
+  "idUser": {
+    "$oid": "60ce27426afbce2dc8bf0693"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  }
+},{
+  "_id": {
+    "$oid": "60d2d74f98a403291046fa24"
+  },
+  "title": "Uzumaki",
+  "numberOfTheCollection": 1,
+  "numberTotalCollection": 3,
+  "image": "https://i.pinimg.com/originals/32/04/e3/3204e3db75b14a580248062611cdcf76.png",
+  "authors": "Junji Ito",
+  "numberOfPages": 85,
+  "dateOfUpload": "15/06/2021",
+  "score": "5/5",
+  "idUser": {
+    "$oid": "60ce27426afbce2dc8bf0693"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  }
+},{
+  "_id": {
+    "$oid": "60d2d74f98a403291046fa25"
+  },
+  "title": "Kimetsu No Yaiba",
+  "subtitle": "Night",
+  "numberOfTheCollection": 1,
+  "numberTotalCollection": 23,
+  "image": "https://www.readdemonslayer.xyz/wp-content/uploads/Demon-Slayer-Kimetsu-no-Yaiba-Chapter-1-Cruelty.jpg",
+  "authors": "Koyoharu Gotōge",
+  "numberOfPages": 46,
+  "dateOfUpload": "15/06/2021",
+  "score": "4/5",
+  "idUser": {
+    "$oid": "60ce27426afbce2dc8bf0693"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-23T06:40:15.877Z"
+  }
+}]

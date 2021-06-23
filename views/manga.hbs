@@ -3,8 +3,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Comic Book Shop - Comics </title>
-    <link rel="stylesheet" href="/styles/comics.css" />
+    <title> Comic Book Shop - Manga </title>
+    <link rel="stylesheet" href="/styles/manga.css" />
     <link rel="shortcut icon" href="/uploads/comic_book.ico" />
 <script src="js/main.js"></script>
   </head>
@@ -12,7 +12,7 @@
     <header>
       <nav>
         {{#if user}}
-          <a class="btn" href="/">Home</a>
+         <a class="btn" href="/">Home</a>
           <a class="btn" href="/comics">Comics</a>
           <a class="btn" href="/manga">Manga</a>
           <a class="btn" href="/stats">Stats</a>
@@ -28,7 +28,7 @@
     </header>
     <main>
       <div class="wrapper">
-        {{#each arrayComics}}
+        {{#each arrayMangas}}
           <div class="card">
             <img src="{{image}}" alt="" width="200px" />
             <div class="descriptions">
@@ -49,7 +49,7 @@
           </div>
         {{/each}}
         <form
-          action="/comics/add-comic"
+          action="/mangas/add-manga"
           method="POST"
           class="card"
           enctype="multipart/form-data"

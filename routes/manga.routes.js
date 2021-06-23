@@ -3,20 +3,20 @@ const {
   upload,
   uploadToCloudinary,
 } = require("../middlewares/file.middleware");
-const Comic = require("../models/Comic.model");
+const Manga = require("../models/Manga.model");
 
 const router = express.Router();
 
 router.get("/", async (req, res, next) => {
   try {
     const userlog = req.user;
-    const comics = await Comic.find({
+    const mangas = await Manga.find({
       idUser: userlog._id,
     });
-    console.log(comics);
-    return res.status(200).render("comics", {
-      title: "Comics",
-      arrayComics: comics,
+    console.log(mangas);
+    return res.status(200).render("manga", {
+      title: "Manga",
+      arrayMangas: mangas,
       user: req.user,
     });
   } catch (error) {
@@ -29,7 +29,7 @@ router.delete("/:id", async (req, res, next) => {
     const { id } = req.params;
     let response = "";
 
-    const deleted = await Comic.findByIdAndDelete(id);
+    const deleted = await Manga.findByIdAndDelete(id);
     if (deleted) response = "Comic deleted from db";
     else response = "Can't find a comic with this id. ¿Are you sure?";
 
@@ -40,7 +40,7 @@ router.delete("/:id", async (req, res, next) => {
 });
 
 router.post(
-  "/add-comic",
+  "/add-manga",
   [upload.single("image"), uploadToCloudinary],
   async (req, res, next) => {
     try {
@@ -57,7 +57,7 @@ router.post(
         dateOfUpload,
       } = req.body;
       const image = req.fileUrl ? req.fileUrl : "";
-      const newComic = new Comic({
+      const newManga = new Manga({
         title,
         subtitle,
         numberOfTheCollection,
@@ -69,9 +69,9 @@ router.post(
         image,
         idUser,
       });
-      const createdComic = await newComic.save();
+      const createdManga = await newManga.save();
 
-      return res.redirect("/comics");
+      return res.redirect("/manga");
     } catch (error) {
       return next(error);
     }
