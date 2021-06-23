@@ -159,6 +159,7 @@ main {
   margin-top: 30px;
   opacity: 70%;
   filter: grayscale(100%);
+  border-radius: 8px;
 }
 .hover01 {
   -webkit-transform: scale(1);
