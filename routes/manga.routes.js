@@ -30,8 +30,8 @@ router.delete("/:id", async (req, res, next) => {
     let response = "";
 
     const deleted = await Manga.findByIdAndDelete(id);
-    if (deleted) response = "Comic deleted from db";
-    else response = "Can't find a comic with this id. ¿Are you sure?";
+    if (deleted) response = "Manga deleted from db";
+    else response = "Can't find a manga with this id. ¿Are you sure?";
 
     return res.status(200).json(response);
   } catch (error) {
