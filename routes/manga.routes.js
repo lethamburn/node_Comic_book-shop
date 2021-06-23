@@ -14,7 +14,7 @@ router.get("/", async (req, res, next) => {
       idUser: userlog._id,
     });
     console.log(mangas);
-    return res.status(200).render("manga", {
+    return res.status(200).render("mangas", {
       title: "Manga",
       arrayMangas: mangas,
       user: req.user,
@@ -71,7 +71,7 @@ router.post(
       });
       const createdManga = await newManga.save();
 
-      return res.redirect("/manga");
+      return res.redirect("/mangas");
     } catch (error) {
       return next(error);
     }
