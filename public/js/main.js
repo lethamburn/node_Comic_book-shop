@@ -22,6 +22,6 @@ deleteManga = async (id) => {
       },
     });
 
-    window.location.href = "/manga";
+    window.location.href = "/mangas";
   }
 };
