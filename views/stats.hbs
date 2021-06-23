@@ -3,9 +3,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comic Book Shop - Login</title>
+    <title>Comic Book Shop - Stats</title>
     <link rel="stylesheet" href="/styles/stats.css" />
     <link rel="shortcut icon" href="/uploads/comic_book.ico" />
+    <script src="js/main.js"></script>
   </head>
   <body>
    <header>
@@ -25,7 +26,15 @@
 
       </nav>
     </header>
-    <h1>Comics</h1>
+    <div class="bubble bubble--highlight">
+         User: {{user.name}} <br>
+    </div>
+      <div class="bubble bubble--highlight">
+            E-mail: {{user.email}}
+    </div>
+    <div class="bubble bubble--highlight">
+          Comics: {{arrayComics.length}}
+    </div>
      <div class="wrapper">
         {{#each arrayComics}}
           <div class="card">
@@ -34,6 +43,17 @@
           </div>
         {{/each}}
     </div>
+    <div class="bubble bubble--highlight">
+          Manga: {{arrayMangas.length}}
+    </div>
+     <div class="wrapper">
+        {{#each arrayMangas}}
+          <div class="card">
+            <img src="{{image}}" alt="" width="200px" />
+        
+          </div>
+        {{/each}}
+
       {{#if error}}
     
         <div style="color: red">{{error}}</div>

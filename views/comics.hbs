@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <nav>
+            <nav>
         {{#if user}}
           <a class="btn" href="/">Home</a>
           <a class="btn" href="/comics">Comics</a>
@@ -26,8 +26,9 @@
 
       </nav>
     </header>
-    <main>
+    <main>     
       <div class="wrapper">
+        
         {{#each arrayComics}}
           <div class="card">
             <img src="{{image}}" alt="" width="200px" />
